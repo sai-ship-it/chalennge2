@@ -6,8 +6,8 @@ env:
   FILE_NAME: helloworld.txt
 
 jobs:
-  build:
-    name: Build
+  main:
+    name: Main
     runs-on: ubuntu-latest
     steps:
 
@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v2
    
     - name: Upload artifact for linux
-      uses: actions/upload-artifact@v1.0.0
+      uses: actions/upload-artifact@v2
       with:
-        name: linux
+        name: ${{ env.FILE_NAME }}
         path: ./${{ env.FILE_NAME }}
