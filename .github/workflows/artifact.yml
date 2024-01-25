@@ -3,7 +3,7 @@ name: artifact
 on: [push]
 
 env:
-  FILE_NAME: hello-world.txt
+  FILE_NAME: helloworld.txt
 
 jobs:
   build:
